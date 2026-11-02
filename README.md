@@ -17,8 +17,6 @@ I chose these examples because I can explain what the player or user sees, what 
 
 ## 1. Duplicated Code in Morningstar Port
 
-### Two messages, almost the same animation
-
 The example comes from `src/Systems/HealthPackManager.js` in my local Morningstar Port project. When the player collects a pack below maximum health, `collect` calls `flashHeal`. At full health, it calls `flashFull` and leaves the pack available.
 
 These are the original two methods, wrapped in a small class so they can be run separately from the game:
@@ -126,8 +124,6 @@ The numbers are deliberately unchanged. Healing still lasts 720 ms and ends at `
 To prevent this smell, I would compare related feedback methods when adding a new message and ask which parts need to change together. I would keep this helper local to health-pack feedback for now. Two similar effects do not justify a game-wide effects framework, especially if other messages need different lifetimes or cleanup rules.
 
 ## 2. Long Parameter List in Sticker Sketchpad
-
-### Moving the pointer needs seven arguments
 
 Sticker Sketchpad is my browser drawing project. It stores a stroke as points and redraws the canvas as the user drags. The source is [the original pointer module at the studied commit](https://github.com/yifeiyang19-code/CMPM_121_D2/blob/50bea4302ed042c327865fc2231411927543a6d9/src/pointer.ts).
 
