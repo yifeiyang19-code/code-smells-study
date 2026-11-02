@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "lib": [
+      "deno.window",
+      "dom",
+      "dom.iterable"
+    ],
+    "strict": true
+  },
+  "tasks": {
+    "check": "deno test check-sketchpad.test.ts"
+  }
+}
