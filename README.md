@@ -306,8 +306,6 @@ The eight TypeScript cases compare both implementations and check expected point
 
 These checks cover the isolated behavior of the examples. An application integration would still need drawing and in-game visual checks. The change I would look for in both projects is easier maintenance with the same visible result. Neither example needs a new gameplay rule.
 
-The [presentation script](PRESENTATION.txt) follows the two examples in README order.
-
 ## Sources
 
 - Martin Fowler, [Code Smell](https://martinfowler.com/bliki/CodeSmell.html). A smell is a clue to investigate; its presence alone does not establish a design failure.
